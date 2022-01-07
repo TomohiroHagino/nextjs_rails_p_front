@@ -21,7 +21,6 @@ export const updateObject = async ({model, id, title, body}): Promise<SKILL_OBJE
                     console.error('response.status:', response.status);
                     throw new Error(response.statusText);
                   }
-                  response.json()
                   return response.json()
                 })
                 .catch(error => {

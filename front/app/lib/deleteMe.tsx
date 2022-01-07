@@ -29,7 +29,6 @@ import { CRED_HEAD, ME_OBJECT } from "../src/features/types";
                       console.error('response.status:', response.status);
                       throw new Error(response.statusText);
                     }
-                    response.json()
                     return response.json()
                   })
                   .catch(error => {
