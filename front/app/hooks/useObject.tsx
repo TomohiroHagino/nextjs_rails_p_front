@@ -77,6 +77,7 @@ export const useObect= (model: string): [Array<Object>,any]  => {
   const showEditModal: Function = (boolean, id): void => {
     console.log(`showModal: ${boolean}`)
     console.log(`skillNumber: ${id}`)
+    setValidMessages("")
     setShowModal(boolean)
     if (objs != []) {
       const result = objs.find((s) => s.id === id);
