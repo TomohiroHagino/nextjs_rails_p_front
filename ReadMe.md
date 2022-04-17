@@ -26,7 +26,10 @@ api(Ruby on Rails):
 7 トースト
 <img width="1215" alt="スクリーンショット 2022-01-05 19 05 17" src="https://user-images.githubusercontent.com/43706329/148199748-ee1c66ac-f46e-4b8b-947f-92afe14dd38c.png">
 
-8 Seaquel Aceを使用しています
+8 バリデーション追加
+<img width="1190" alt="スクリーンショット 2022-04-17 23 40 43" src="https://user-images.githubusercontent.com/43706329/163729818-e907b2f6-0019-45a9-bc84-bca7aa10bd00.png">
+
+9 Seaquel Aceを使用しています
 <img width="1377" alt="スクリーンショット 2022-01-05 19 09 42" src="https://user-images.githubusercontent.com/43706329/148200027-2dd8d772-0f50-49e7-af33-c0f034e4f8dc.png">
 
 Docker環境
