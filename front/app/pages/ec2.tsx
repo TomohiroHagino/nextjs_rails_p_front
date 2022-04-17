@@ -16,6 +16,7 @@ const Ec2: NextPage = () => {
     getSkillObjects,
     putSkillObj,
     deleteSkillObj,
+    validMessages,
     showEditModal,
     updated,
     setUpdated,
@@ -84,6 +85,8 @@ const Ec2: NextPage = () => {
           putSkillObj={(isState) => putSkillObj({ model: modelName, id: isState.id, title: isState.title, body: isState.body })}
           // 削除処理
           deleteSkillObj={(isState) => deleteSkillObj({ model: modelName, id: isState.id })}
+          // バリデーションメッセージ
+          validMessages={ validMessages }
         />
 
       </MainLayout>

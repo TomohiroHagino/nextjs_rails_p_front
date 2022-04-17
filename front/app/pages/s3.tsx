@@ -15,6 +15,7 @@ const S3 = () => {
     getSkillObjects,
     putSkillObj,
     deleteSkillObj,
+    validMessages,
     showEditModal,
     updated,
     setUpdated,
@@ -49,11 +50,11 @@ const S3 = () => {
       console.log("更新が実行されました")
       if (updated) { setShowEditToast(true) }
       if (deleted) { setShowDeleteToast(true) }
+      setObjs(getSkillObjects(modelName))
+      if(updated) { setTimeout(()=>{setUpdated(false)}, 3000) }
       if(deleted) { setTimeout(()=>{setDeleted(false)}, 3000) }
     }
   }, [updated,deleted])
-
-  
 
   return (
     <OnHeaderLayout title="S3 page">
@@ -80,9 +81,11 @@ const S3 = () => {
           skillId={ skillId }
           setSkillId={(isState)=>setSkillId(isState)}
           // 更新処理
-          putSkillObj={(isState) => putSkillObj({ model: modelName, id: isState.id, title: isState.title, body: isState.body })}
+          putSkillObj={(isState) => putSkillObj({ model: modelName, id: isState.id, title: isState.title, body: isState.body})}
           // 削除処理
           deleteSkillObj={(isState) => deleteSkillObj({ model: modelName, id: isState.id })}
+          // バリデーションメッセージ
+          validMessages={ validMessages }
         />
 
       </MainLayout>

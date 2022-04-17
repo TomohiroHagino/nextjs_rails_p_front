@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { deleteObject } from "../lib/deleteObject";
 import { updateObject } from "../lib/updateObject";
+import { validObject } from "../lib/validObject";
 import { fetchHeaders } from "../services/utils/fetchHeaders";
 import { SKILL_OBJECT } from "../src/features/types";
 
@@ -24,21 +25,36 @@ export const useObect= (model: string): [Array<Object>,any]  => {
   const [delChecked, setDelChecked] = useState<boolean>(false)
   const handleUpdClick: Function = () => setUpdChecked(!updChecked)
   const handleDelClick: Function = () => setDelChecked(!delChecked)
+  // バリデーションメッセージ表示
+  const [validMessages, setValidMessages] = useState<string>("")
+
+  // バリデーション
+  const validateSkillObj: Function = async ({title, body}: SKILL_OBJECT): Promise<SKILL_OBJECT> => {
+    const res = await validObject({title, body})
+    return res
+  }
 
   // 更新処理
   const putSkillObj: Function = async ({model, id, title, body}: SKILL_OBJECT): Promise<SKILL_OBJECT> => {
-    const res = await updateObject({model, id, title, body})
-    setUpdated(true)
-    setShowModal(false)
-    console.log(`showModal: false`)
-    setTimeout(()=>
-      setUpdChecked(true
-    ),2000)
-    setUpdChecked(false)
-    setShowEditToast(false)
-    setShowEditToast(true)
-    setUpdated(false)
-    return res
+    const valid_res = await validObject({title, body})
+
+    if (valid_res.result.status == "ok") {
+      const res = await updateObject({model, id, title, body})
+      setUpdated(true)
+      setShowModal(false)
+      console.log(`showModal: false`)
+      setTimeout(()=>
+        setUpdChecked(true
+      ),2000)
+      setUpdChecked(false)
+      setShowEditToast(false)
+      setShowEditToast(true)
+      setUpdated(false)
+      return res
+    }
+    
+    setValidMessages(valid_res.result.messages)
+    return valid_res
   }
 
   // 削除処理
@@ -140,6 +156,7 @@ export const useObect= (model: string): [Array<Object>,any]  => {
     getSkillObjects,
     putSkillObj,
     deleteSkillObj,
+    validMessages,
     showEditModal,
     updated,
     setUpdated,
