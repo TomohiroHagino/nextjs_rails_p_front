@@ -4,7 +4,7 @@ import Card from "../../atoms/card/Card"
 import { ModalButton } from "../../atoms/button/ModalButton" 
 
 export const SkillCard: VFC<SKILL_PROPS> = (props) => {
-  const { id, title, body, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj } = props
+  const { id, title, body, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj, validMessages } = props
 
   return (
     <div className="
@@ -27,6 +27,8 @@ export const SkillCard: VFC<SKILL_PROPS> = (props) => {
         skillId={skillId}
         // 更新処理
         putSkillObj={putSkillObj}
+        // バリデーションメッセージ
+        validMessages={validMessages}
       >
         edit
       </ModalButton>
@@ -49,7 +51,7 @@ export const SkillCard: VFC<SKILL_PROPS> = (props) => {
         "
         onClick={()=> deleteSkillObj({model: model, id: id})}
       >
-        <p className="pt-2.5">del</p>
+        <p className="pt-2">del</p>
       </div>
       <div className="flex">
         <div>{id}</div>

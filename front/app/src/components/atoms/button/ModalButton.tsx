@@ -4,7 +4,7 @@ import { Transition } from '@tailwindui/react'
 
 export function ModalButton(props) {
   // const { model, id, children, onClick, showModal, createTitle, createBody, showEditModal, changeInputTitle, changeInputBody, putSkillObj } = props
-  const { model, id, children, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj } = props
+  const { model, id, children, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, validMessages } = props
 
   return (
     <>
@@ -27,7 +27,7 @@ export function ModalButton(props) {
         "
         onClick={()=> showEditModalFunction(!showModal, id)}
       >
-        <p className="pt-2.5">{children}</p>
+        <p className="pt-2">{children}</p>
       </div>
       <div className="absolute z-50">
       <Transition
@@ -41,7 +41,6 @@ export function ModalButton(props) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            {/*使用する場所によって中身を切り替えられるようにしたい*/}
             <div
               className="justify-center text-black items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             >
@@ -61,6 +60,7 @@ export function ModalButton(props) {
                     </button>
                   </div>
                   <div className="relative p-6 flex-auto z-90">
+                    <p className="text-red-600">{ validMessages }</p>
                     <form>
                       <p>Title</p>
                       <input

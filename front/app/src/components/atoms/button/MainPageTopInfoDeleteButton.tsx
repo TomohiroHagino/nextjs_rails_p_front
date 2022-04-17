@@ -36,7 +36,7 @@ export function MainPageTopInfoDeleteButton(props) {
         `}
         onClick={()=> requestFunction({model: model, id: skillId })}
       >
-        <p className="pt-2.5">{children}</p>
+        <p className="pt-2">{children}</p>
       </div>
     </>
   );

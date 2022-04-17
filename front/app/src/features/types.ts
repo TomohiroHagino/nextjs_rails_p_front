@@ -58,4 +58,14 @@ export interface SKILL_PROPS {
   putSkillObj: Function;
   // 削除処理
   deleteSkillObj: Function;
+  // バリデーションメッセージ
+  validMessages: string;
+}
+
+export interface AUTH_STATE {
+  isLoginView: boolean,
+  loginUser: {
+    id: number,
+    email: string,
+  }
 }

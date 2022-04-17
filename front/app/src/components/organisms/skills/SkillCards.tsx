@@ -1,6 +1,6 @@
 import { SkillCard } from "./SkillCard"
 
-export const SkillCards = ({ objs, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, setCreateTitle, createBody, setCreateBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj }) => {
+export const SkillCards = ({ objs, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, setCreateTitle, createBody, setCreateBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj, validMessages }) => {
 
   return (
     <ul className="
@@ -31,6 +31,8 @@ export const SkillCards = ({ objs, model, showModal, setShowModalFunction, showE
           putSkillObj={putSkillObj}
           // 削除処理
           deleteSkillObj={deleteSkillObj}
+          // バリデーションメッセージ
+          validMessages={validMessages}
         />
       )
       }

@@ -49,7 +49,7 @@ export function MainPageTopInfoEditButton(props) {
         `}
         onClick={()=> showEditModalFunction(!showModal, id)}
       >
-        <p className="pt-2.5">{children}</p>
+        <p className="pt-2">{children}</p>
       </div>
       <div className="absolute z-50">
       <Transition
