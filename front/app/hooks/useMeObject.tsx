@@ -36,8 +36,10 @@ export const useMeObject= (): [ME_OBJECT,any]  => {
   const [showDeleteToast, setShowDeleteToast] = useState(false);
   const [updChecked, setUpdChecked] = useState(false)
   const [delChecked, setDelChecked] = useState(false)
-  const handleUpdClick = () => setUpdChecked(!updChecked)
-  const handleDelClick = () => setDelChecked(!delChecked)
+  const [crtChecked, setCrtChecked] = useState(false)
+  const handleUpdClick: Function = () => setUpdChecked(!updChecked)
+  const handleDelClick: Function = () => setDelChecked(!delChecked)
+  const handleCrtClick: Function = () => setCrtChecked(!crtChecked)
 
   // 更新処理
   const putMeObj = async ({model,id,introduce,frontend,backend,infra,other}: ME_OBJECT): Promise<ME_OBJECT> => {
@@ -165,6 +167,7 @@ const getShowMe: Function = async (path: string) => {
     setShowDeleteToast,
     handleUpdClick,
     handleDelClick,
+    handleCrtClick,
     changeInputBody,
     changeInputContent1,
     changeInputContent2,

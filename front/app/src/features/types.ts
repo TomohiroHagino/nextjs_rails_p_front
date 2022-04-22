@@ -30,9 +30,10 @@ export interface ME_OBJECT {
 
 export interface SKILL_OBJECT {
   model?: string;
-  id: number;
+  id?: number;
   title?: string;
   body?: string;
+  me_id?: string;
 }
 
 export interface SKILL_PROPS {

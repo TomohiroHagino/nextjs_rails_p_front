@@ -1,10 +1,12 @@
 import { OnHeaderLayout } from '../src/components/templates/OnHeaderLayout'
 import { GotoMainPageButton } from '../src/components/atoms/button/GoToMainPageButton'
+import { CreateNewModalButton } from '../src/components/atoms/button/CreateNewModalButton'
 import { SkillCards } from '../src/components/organisms/skills/SkillCards'
 import { MainLayout } from '../src/components/templates/MainLayout'
 import { useEffect } from 'react'
 import { EditedToast } from '../src/components/atoms/toast/EditedToast'
 import { DeletedToast } from '../src/components/atoms/toast/DeletedToast'
+import { CreatedToast } from '../src/components/atoms/toast/CreateToast'
 import { useObect } from '../hooks/useObject'
 
 const S3 = () => {
@@ -13,14 +15,20 @@ const S3 = () => {
   const [objs,{
     setObjs,
     getSkillObjects,
+    postSkillObj,
     putSkillObj,
     deleteSkillObj,
     validMessages,
     showEditModal,
+    showCreateModal,
+    createModal,
+    setCreateModal,
     updated,
     setUpdated,
     deleted,
     setDeleted,
+    created,
+    setCreated,
     skillId,
     setSkillId,
     createTitle,
@@ -29,14 +37,17 @@ const S3 = () => {
     setCreateBody,
     updChecked,
     delChecked,
+    crtChecked,
     showModal,
     setShowModal,
     showEditToast,
     setShowEditToast,
     showDeleteToast,
     setShowDeleteToast,
+    showCreateToast,
     handleUpdClick,
     handleDelClick,
+    handleCrtClick,
     changeInputTitle,
     changeInputBody,
   }] = useObect(modelName)
@@ -44,23 +55,39 @@ const S3 = () => {
   // 初回にレンダリング
   useEffect(() => { setObjs(getSkillObjects(modelName))}, [])
 
-  // 更新後、削除後にレンダリング
+  // 更新後、作成後、削除後にレンダリング
   useEffect(() => {
-    if (updated || deleted) {
-      console.log("更新が実行されました")
-      if (updated) { setShowEditToast(true) }
-      if (deleted) { setShowDeleteToast(true) }
+    if (updated || deleted || created) {
+      console.log("更新もしくは作成もしくは削除が実行されました")
       setObjs(getSkillObjects(modelName))
       if(updated) { setTimeout(()=>{setUpdated(false)}, 3000) }
       if(deleted) { setTimeout(()=>{setDeleted(false)}, 3000) }
+      if(created) { setTimeout(()=>{setCreated(false)}, 3000) }
     }
-  }, [updated,deleted])
+  }, [updated,deleted,created])
 
   return (
     <OnHeaderLayout title="S3 page">
+      <CreateNewModalButton
+        model={modelName}
+        // モーダルフラグ
+        createModal={createModal}
+        showCreateModalFunction={showCreateModal}
+        // モーダルの内容
+        createTitle={createTitle}
+        createBody={createBody}
+        // フィールド変更時の処理
+        changeInputTitle={changeInputTitle}
+        changeInputBody={changeInputBody}
+        // 作成処理
+        postSkillObj={postSkillObj}
+        // バリデーションメッセージ
+        validMessages={validMessages}
+      />
       <MainLayout>
         {showEditToast && <EditedToast checked={ updChecked } handleClick={ handleUpdClick }></EditedToast>}
         {showDeleteToast && <DeletedToast checked={ delChecked } handleClick={ handleDelClick }></DeletedToast>}
+        {showCreateToast && <CreatedToast checked={ crtChecked } handleClick={ handleCrtClick }></CreatedToast>}
         <div>CSRレンダリング: ReactのuseEffect</div>
         <SkillCards
           objs={ objs.length > 0 ? objs : [] }

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export const DeletedToast = ({checked,handleClick}) => {
   return (
     <div className="alert-toast fixed top-12 right-0 m-7 w-5/6 md:w-full max-w-sm">

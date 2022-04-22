@@ -50,9 +50,7 @@ const MainPage: NextPage = () => {
   // 更新後、削除後にレンダリング
   useEffect(() => {
     if (updated || deleted) {
-      console.log("更新が実行されました")
-      if (updated) { setShowEditToast(true) }
-      if (deleted) { setShowDeleteToast(true) }
+      console.log("更新もしくは削除が実行されました")
       setObj(getShowMe(pathName))
       if(updated) { setTimeout(()=>{setUpdated(false)}, 3000) }
       if(deleted) { setTimeout(()=>{setDeleted(false)}, 3000) }
