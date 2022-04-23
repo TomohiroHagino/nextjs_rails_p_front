@@ -1,4 +1,4 @@
-# 2022 ポートフォリオ
+# 2022 ポートフォリオ 自己紹介アプリ
 front(Next.js):
 [https://github.com/TomohiroHagino/nextjs_rails_p_front](https://github.com/TomohiroHagino/nextjs_rails_p_front)
 
@@ -54,4 +54,5 @@ Seaquel Aceでダンプしました。こちらをインポートしてくださ
 [portforio2021_development_2022-01-05.sql.txt](https://github.com/TomohiroHagino/nextjs_rails_p_front/files/7813520/portforio2021_development_2022-01-05.sql.txt)
 
 # ER図
+### ユーザーがログインして、MEの情報を閲覧することができることを目指しました。
 ![erd](https://user-images.githubusercontent.com/43706329/148190591-ec91116d-22d6-472d-8319-b108b93ebbfe.jpeg)
