@@ -24,12 +24,12 @@ export const CreateNewModalButton = (props) => {
           fill="none" stroke="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-        ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+        ><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
         <div className="text-white">
           <p className="text-center text-lg font-bold">New</p>
         </div>
       </div>
-      <div className="absolute z-50">
+      <div className="absolute z-20">
         <Transition
           show={createModal}
         >
@@ -42,7 +42,7 @@ export const CreateNewModalButton = (props) => {
             leaveTo="opacity-0"
           >
             <div
-              className="justify-center text-black items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              className="justify-center text-black items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-20 outline-none focus:outline-none"
             >
               <div className="relative w-auto my-6 mx-auto max-w-3xl z-200">
                 <div className="bg-white border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none z-100">
