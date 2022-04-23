@@ -2,7 +2,7 @@ import { Transition } from '@tailwindui/react'
 // import { bindActionCreators } from "@reduxjs/toolkit";
 
 export function ModalButton(props) {
-  const { model, id, children, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, validMessages } = props
+  const { model, id, children, showModal, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, putSkillObj, validMessages } = props
 
   return (
     <>

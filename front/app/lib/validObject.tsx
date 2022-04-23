@@ -1,5 +1,5 @@
 import { fetchHeaders } from "../services/utils/fetchHeaders";
-import { CRED_HEAD, SKILL_OBJECT } from "../src/features/types";
+import { CRED_HEAD } from "../src/features/types";
 
 // バリデーション処理
 export const validObject = async ({title, body}): Promise<any> => {

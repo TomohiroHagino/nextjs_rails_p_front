@@ -1,6 +1,6 @@
 import { SkillCard } from "./SkillCard"
 
-export const SkillCards = ({ objs, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, setCreateTitle, createBody, setCreateBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj, validMessages }) => {
+export const SkillCards = ({ objs, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj, validMessages }) => {
 
   return (
     <ul className="

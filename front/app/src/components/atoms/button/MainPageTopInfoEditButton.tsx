@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 import { Transition } from '@tailwindui/react'
-// import { bindActionCreators } from "@reduxjs/toolkit";
 
 export function MainPageTopInfoEditButton(props) {
   const { 
@@ -51,7 +49,7 @@ export function MainPageTopInfoEditButton(props) {
       >
         <p className="pt-2">{children}</p>
       </div>
-      <div className="absolute z-50">
+      <div className="absolute z-20">
       <Transition
           show={showModal}
         >

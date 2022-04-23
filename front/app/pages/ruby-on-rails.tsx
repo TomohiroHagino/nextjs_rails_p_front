@@ -23,7 +23,6 @@ const RubyOnRails: NextPage = () => {
     showEditModal,
     showCreateModal,
     createModal,
-    setCreateModal,
     updated,
     setUpdated,
     deleted,
@@ -42,9 +41,7 @@ const RubyOnRails: NextPage = () => {
     showModal,
     setShowModal,
     showEditToast,
-    setShowEditToast,
     showDeleteToast,
-    setShowDeleteToast,
     showCreateToast,
     handleUpdClick,
     handleDelClick,
@@ -99,9 +96,7 @@ const RubyOnRails: NextPage = () => {
           showEditModalFunction={(boolean, id)=>showEditModal(boolean, id)}
           // モーダルの内容
           createTitle={ createTitle }
-          setCreateTitle={() => setCreateTitle(createTitle) }
           createBody={ createBody }
-          setCreateBody={() => setCreateBody(createBody) }
           // フィールド変更時の処理
           changeInputTitle={(isState) => changeInputTitle(isState)}
           changeInputBody={(isState) => changeInputBody(isState)}

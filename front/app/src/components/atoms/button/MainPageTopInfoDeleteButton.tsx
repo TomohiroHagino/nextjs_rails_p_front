@@ -1,7 +1,3 @@
-import { useState, useEffect } from "react";
-import { Transition } from '@tailwindui/react'
-// import { bindActionCreators } from "@reduxjs/toolkit";
-
 export function MainPageTopInfoDeleteButton(props) {
   const { 
     model,

@@ -1,7 +1,7 @@
 import { Transition } from '@tailwindui/react'
 
 export const CreateNewModalButton = (props) => {
-  const { model, id, children, createModal, setShowModalFunction, showCreateModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, postSkillObj, validMessages } = props
+  const { model, createModal, showCreateModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, postSkillObj, validMessages } = props
 
   return (
     <>

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { CRED_HEAD, ME_OBJECT } from "../src/features/types";
+import { ME_OBJECT } from "../src/features/types";
 import { deleteMe } from "../lib/deleteMe";
 import { updateMe } from "../lib/updateMe";
 import { fetchHeaders } from "../services/utils/fetchHeaders";

@@ -4,7 +4,7 @@ import Card from "../../atoms/card/Card"
 import { ModalButton } from "../../atoms/button/ModalButton" 
 
 export const SkillCard: VFC<SKILL_PROPS> = (props) => {
-  const { id, title, body, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, setSkillId, putSkillObj, deleteSkillObj, validMessages } = props
+  const { id, title, body, model, showModal, setShowModalFunction, showEditModalFunction, createTitle, createBody, changeInputTitle, changeInputBody, skillId, putSkillObj, deleteSkillObj, validMessages } = props
 
   return (
     <div className="

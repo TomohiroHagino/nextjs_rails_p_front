@@ -7,7 +7,6 @@ import { selectIsLoginView } from '../src/slices/auth/authSlice';
 import { AppDispatch } from '../src/store/store'
 import { toggleMode,fetchAsyncLogin,fetchAsyncRegister } from "../src/slices/auth/authSlice"
 import { useState } from 'react'
-import { NextPage } from 'next'
 
 export default function Home() {
 
