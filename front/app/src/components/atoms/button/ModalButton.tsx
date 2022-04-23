@@ -27,7 +27,7 @@ export function ModalButton(props) {
       >
         <p className="pt-2">{children}</p>
       </div>
-      <div className="absolute z-50">
+      <div className="absolute z-20">
       <Transition
         show={showModal}
       >
@@ -40,7 +40,7 @@ export function ModalButton(props) {
           leaveTo="opacity-0"
         >
           <div
-            className="justify-center text-black items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center text-black items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-20 outline-none focus:outline-none"
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl z-200">
               <div className="bg-white border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none z-100">

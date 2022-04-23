@@ -17,7 +17,7 @@ export const Header = memo(() => {
   const normalStyle = "mr-6 font-bold"
 
   return (
-    <div className="z-10 relaive w-full h-12 justify-center items-center bg-black text-lg mb-2">
+    <div className="z-50 relaive w-full h-12 justify-center items-center bg-black text-lg mb-2">
       <MediaQuery query="(max-width: 1023px)">
         <div className="menu-wrap">
           <div className="flex">
