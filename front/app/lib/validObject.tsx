@@ -26,5 +26,6 @@ export const validObject = async ({title, body}): Promise<any> => {
                 .catch(error => {
                   console.error('通信に失敗しました', error);
                 });
+  console.log(res)
   return res
 }
