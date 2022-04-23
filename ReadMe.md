@@ -1,4 +1,8 @@
 # 2022 ポートフォリオ 自己紹介アプリ
+
+### ユーザー(User)がログインして、ぼく(Me)の情報を閲覧することができることを目指しました。
+CRUDの機能をつけていますが、あくまで僕のスキル情報が編集、作成、論理削除されます。(詳細は一番下)
+
 front(Next.js):
 [https://github.com/TomohiroHagino/nextjs_rails_p_front](https://github.com/TomohiroHagino/nextjs_rails_p_front)
 
