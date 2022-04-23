@@ -158,7 +158,7 @@ export const useObect = (model: string): [Array<Object>,any]  => {
     })
     .then(data => {
       console.log('データ取得')
-      setObjs(data)
+      setObjs(data.reverse())
       console.log(data)
       return data
       }
