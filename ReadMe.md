@@ -54,5 +54,5 @@ Seaquel Aceでダンプしました。こちらをインポートしてくださ
 [portforio2021_development_2022-01-05.sql.txt](https://github.com/TomohiroHagino/nextjs_rails_p_front/files/7813520/portforio2021_development_2022-01-05.sql.txt)
 
 # ER図
-### ユーザーがログインして、MEの情報を閲覧することができることを目指しました。
+### ユーザー(User)がログインして、ぼく(Me)の情報を閲覧することができることを目指しました。
 ![erd](https://user-images.githubusercontent.com/43706329/148190591-ec91116d-22d6-472d-8319-b108b93ebbfe.jpeg)
