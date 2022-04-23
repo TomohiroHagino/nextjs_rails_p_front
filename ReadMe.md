@@ -5,7 +5,7 @@ front(Next.js):
 api(Ruby on Rails):
 [https://github.com/TomohiroHagino/nextjs_rails_p_api](https://github.com/TomohiroHagino/nextjs_rails_p_api)
 
-1 メインページ 現在はRuby on Railsでの開発が4年ほど。
+1 メインページ 現在はRuby on Railsでの開発が4年ほど。 Next.jsは６ヶ月ほどの経験があります。
 <img width="1221" alt="スクリーンショット 2022-01-05 18 15 42" src="https://user-images.githubusercontent.com/43706329/148192350-8ee6b7b0-85b7-4ab7-87ab-e473a5c98a2d.png">
 
 2 モーダル
@@ -32,7 +32,7 @@ api(Ruby on Rails):
 9 Seaquel Aceを使用しています
 <img width="1377" alt="スクリーンショット 2022-01-05 19 09 42" src="https://user-images.githubusercontent.com/43706329/148200027-2dd8d772-0f50-49e7-af33-c0f034e4f8dc.png">
 
-Docker環境
+# Docker環境
 ```
 docker-compose up -d
 ```
