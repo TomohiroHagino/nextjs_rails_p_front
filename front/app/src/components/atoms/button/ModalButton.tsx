@@ -50,7 +50,7 @@ export function ModalButton(props) {
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={setShowModalFunction}
+                    onClick={()=> showEditModalFunction(!showModal, skillId)}
                   >
                     <span className="text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       ×
@@ -88,7 +88,7 @@ export function ModalButton(props) {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={setShowModalFunction}
+                    onClick={()=> showEditModalFunction(!showModal, skillId)}
                   >
                     Close
                   </button>
