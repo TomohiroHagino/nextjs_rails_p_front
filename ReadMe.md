@@ -5,6 +5,11 @@
 ユーザーログイン機能をつけていますが、
 あくまで僕のスキル情報が編集、作成、論理削除されるようにしています。
 
+hostsに以下の行を追加してください
+```
+127.0.0.1 api
+```
+
 front(Next.js):
 [https://github.com/TomohiroHagino/nextjs_rails_p_front](https://github.com/TomohiroHagino/nextjs_rails_p_front)
 
@@ -58,6 +63,15 @@ npm run dev
 # DBダンプデータ
 Seaquel Aceでダンプしました。こちらをインポートしてください。  
 [portforio2021_development_2022-01-05.sql.txt](https://github.com/TomohiroHagino/nextjs_rails_p_front/files/7813520/portforio2021_development_2022-01-05.sql.txt)
+
+
+```
+Host: 自由
+Username: root
+password: password
+database: portforio2021_development
+port:4306
+```
 
 # ER図
 ### ユーザー(User)がログインして、ぼく(Me)の情報を閲覧することができることを目指しました。
