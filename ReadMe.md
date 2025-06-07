@@ -77,3 +77,120 @@ port:4306
 ### ユーザー(User)がログインして、ぼく(Me)の情報を閲覧することができることを目指しました。
 CRUDの機能をつけていますが、あくまで僕のスキル情報が編集、作成、論理削除されます。
 ![erd](https://user-images.githubusercontent.com/43706329/148190591-ec91116d-22d6-472d-8319-b108b93ebbfe.jpeg)
+
+
+```
+Table mes {
+  id bigint [pk, increment]
+  introduce varchar(500) [note: '前置き文']
+  created_at datetime(6)
+  updated_at datetime(6)
+  frontend varchar(50) [note: 'フロントエンド']
+  backend varchar(50) [note: 'バックエンド']
+  infra varchar(50) [note: 'インフラ']
+  other varchar(50) [note: 'その他']
+  deleted boolean [note: '論理削除フラグ']
+}
+
+Table ec2_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  deleted boolean [note: '論理削除フラグ']
+  created_at datetime(6)
+  updated_at datetime(6)
+
+}
+
+Table ecs_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  deleted boolean [note: '論理削除フラグ']
+  created_at datetime(6)
+  updated_at datetime(6)
+}
+
+Table mysql_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  deleted boolean [note: '論理削除フラグ']
+  created_at datetime(6)
+  updated_at datetime(6)
+}
+
+Table next_js_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  created_at datetime(6)
+  updated_at datetime(6)
+  deleted boolean [note: '論理削除フラグ']
+}
+
+Table rails_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  created_at datetime(6)
+  updated_at datetime(6)
+  deleted boolean [note: '論理削除フラグ']
+}
+
+Table rds_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  deleted boolean [note: '論理削除フラグ']
+  created_at datetime(6)
+  updated_at datetime(6)
+}
+
+Table react_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  created_at datetime(6)
+  updated_at datetime(6)
+  deleted boolean [note: '論理削除フラグ']
+
+}
+
+Table ruby_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  created_at datetime(6)
+  updated_at datetime(6)
+  deleted boolean [note: '論理削除フラグ']
+}
+
+Table s3_skills {
+  id bigint [pk, increment]
+  title varchar(50) [note: 'タイトル']
+  body varchar(5000) [note: '内容']
+  me_id bigint
+  deleted boolean [note: '論理削除フラグ']
+  created_at datetime(6)
+  updated_at datetime(6)
+}
+
+Ref: ec2_skills.me_id > mes.id
+Ref: ecs_skills.me_id > mes.id
+Ref: mysql_skills.me_id > mes.id
+Ref: next_js_skills.me_id > mes.id
+Ref: rails_skills.me_id > mes.id
+Ref: rds_skills.me_id > mes.id
+Ref: react_skills.me_id > mes.id
+Ref: ruby_skills.me_id > mes.id
+Ref: s3_skills.me_id > mes.id
+```
